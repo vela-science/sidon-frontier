@@ -1,0 +1,46 @@
+name: Verify the signed frontier
+
+# The git-native gate, via the shared action: on every change to the signed
+# frontier, constellate-science/vela re-derives it from a clean checkout and
+# proves the working tree IS the signed state (replay + signatures + hash
+# parity), then re-runs every frozen verifier on every stored witness. It NEVER
+# signs and NEVER merges — the auto-merge decision is a separate workflow.
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".vela/**"
+      - "frontier.json"
+      - "frontier.yaml"
+      - "vela.lock"
+      - "proof/**"
+      - "witnesses/**"
+      - ".github/workflows/vela-frontier.yml"
+  pull_request:
+    paths:
+      - ".vela/**"
+      - "frontier.json"
+      - "frontier.yaml"
+      - "vela.lock"
+      - "proof/**"
+      - "witnesses/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: constellate-science/vela@main
+        with:
+          # vela-version defaults to the vela_version pinned in vela.lock, so
+          # the gating binary always matches the one that materialized state.
+          strict: "false"
+      # A stranger re-runs every frozen verifier on every stored witness from a
+      # clean checkout. `vela` is on PATH from the action above. This is the
+      # un-forgeable floor the exact-lane admissions rest on.
+      - name: Reproduce every witness from scratch
+        run: vela reproduce .

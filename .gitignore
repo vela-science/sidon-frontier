@@ -1,0 +1,17 @@
+# This is a PUBLIC frontier repo: the signed event log under .vela/, the
+# witnesses, frontier.json, vela.lock, bounds.json and proof/ are the record and
+# are all committed. Only transient scratch is ignored.
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+
+# review packets — a local worklist, regenerated on demand
+packets/
+# transient search-witness scratch — vac_ candidate records from harvest runs;
+# the accepted findings are what we commit, not the candidate stream
+activity/
+# per-run lease + work-session state under the store (not part of replayable truth)
+/.vela/tasks/
+/.vela/workspaces/
