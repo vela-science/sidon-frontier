@@ -22,18 +22,16 @@
     }
   },
   "output_contract": {
-    "schema": "canopus.sidon-a24-witness.v1",
-    "path": "artifacts/sidon-a24-improvement.witness.txt",
-    "kind": "sidon-witness",
-    "format": [
-      "schema=canopus.sidon-a24-witness.v1",
-      "target=sidon:a24-improve",
-      "n=24",
-      "baseline_size=7192",
-      "claimed_size=<integer greater than 7192>",
-      "points=<comma-separated distinct six-digit lowercase hexadecimal vectors>",
-      "The file ends with exactly one newline."
-    ]
+    "schema": "vela.witness.sidon.v1",
+    "path": "artifacts/sidon-a24-improvement.witness.json",
+    "kind": "vela-witness",
+    "format": {
+      "kind": "sidon",
+      "n": 24,
+      "claimed_size": "<integer at least 7193>",
+      "points": "<claimed_size distinct arrays of exactly 24 binary integers>"
+    },
+    "exact_claim": "There exists a Sidon subset of {0,1}^24 with at least 7,193 elements."
   },
   "verification": {
     "dimensions": "Every point is one 24-bit binary vector.",
@@ -51,4 +49,3 @@
     "permit_requires": "A previously human-signed Vela policy matching the exact packet, profile, capsule, result-contract, replayability, and Engine context roots."
   }
 }
-

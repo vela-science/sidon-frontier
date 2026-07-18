@@ -19,11 +19,13 @@ vela next . --limit 1 --json
 vela work sidon:a24-improve --as agent:<name> --json
 
 # Produce the exact artifact required by the returned packet, then:
-vela reproduce path/to/witness
+vela-verify --claim \
+  "There exists a Sidon subset of {0,1}^24 with at least 7,193 elements." \
+  path/to/witness.json
 vela land --frontier . --work sidon:a24-improve \
-  --claim "A precisely scoped lower-bound claim." \
+  --claim "There exists a Sidon subset of {0,1}^24 with at least 7,193 elements." \
   --type computational --replayability exact \
-  --artifact path/to/witness:sidon-witness \
+  --artifact path/to/witness.json:vela-witness \
   --caveat "This is a lower bound, not a proof of maximality." \
   --as agent:<name> --json
 ```
