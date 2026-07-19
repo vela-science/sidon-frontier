@@ -1,0 +1,25 @@
+{
+  "schema": "vela.event.v0.1",
+  "id": "vev_3d3fa7cb1066c3fc",
+  "kind": "attempt.claimed",
+  "target": {
+    "type": "finding",
+    "id": "sidon:a24-improve"
+  },
+  "actor": {
+    "id": "agent:codex-sidon",
+    "type": "agent"
+  },
+  "timestamp": "2026-07-19T05:36:16.831779+00:00",
+  "reason": "obligation lease (swarm coordination)",
+  "before_hash": "sha256:null",
+  "after_hash": "sha256:null",
+  "payload": {
+    "claimant_actor": "agent:codex-sidon",
+    "claimant_pubkey": "88e7513e13a0def332909d38969a0c94cebde4527b19e3980e7d300f97e9d17b",
+    "lease_ttl_seconds": 86400,
+    "obligation_id": "sidon:a24-improve"
+  },
+  "caveats": [],
+  "signature": "v1:a1afe39eda683a9ac8789fc61b6aaa08fca6f15882d666152ea157520aac26a6ae7a31ced8f83efe2ed4fd499932b18848d65460a778703dce4eb7f9398b8501"
+}

@@ -1,10 +1,10 @@
 {
-  "event_count": 101,
-  "event_log_hash": "sha256:5f85d0896688fec7b5a6517928f9e954c0136c8f345ade51011b95b42b9d6cb6",
+  "event_count": 102,
+  "event_log_hash": "sha256:d9678792f482d80ae41545d544575876b24622e1708ab4b49194aa1b89229d9b",
   "freshness": "fresh",
-  "frontier_hash": "sha256:a09958d8bdb66ddcbbd274c345c6beab2fbf409b60e2e940ae4902487d952ce4",
+  "frontier_hash": "sha256:5434819581ebad1675d1dacbdd7a42e6ffaf61d4f1c232452a21dd979d4b7022",
   "frontier_id": "vfr_496956067dc5ad79",
-  "materialized_at": "2026-07-06T14:17:33.468886+00:00",
+  "materialized_at": "2026-07-19T05:36:16.831779+00:00",
   "paths": {
     "events_authority": ".vela/events/",
     "events_manifest": "proof/events.manifest.jsonl",
@@ -12,7 +12,7 @@
     "lockfile": "vela.lock",
     "replay_trace": "proof/replay.trace.jsonl"
   },
-  "proposal_state_hash": "sha256:378798850a42f954df2572c64df196de16043dbaf765207d423ff90e8d1d2f7f",
+  "proposal_state_hash": "sha256:7d2dfdd2f26660d3bde18d204a678c6c3963ac6d32151c5ce5215d1ae1a05a37",
   "reducer": {
     "digest": "sha256:5ed141c9e5336693a450eedec9ebe43855a3379dea5d7b654fdba4d1d33081bc",
     "name": "vela",
