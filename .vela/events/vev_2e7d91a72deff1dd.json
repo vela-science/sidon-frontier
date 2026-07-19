@@ -1,0 +1,24 @@
+{
+  "schema": "vela.event.v0.1",
+  "id": "vev_2e7d91a72deff1dd",
+  "kind": "review.accepted",
+  "target": {
+    "type": "proposal",
+    "id": "vpr_fc11a76e1f726ba9"
+  },
+  "actor": {
+    "id": "reviewer:will-blair",
+    "type": "human"
+  },
+  "timestamp": "2026-07-19T14:12:11.218690000Z",
+  "reason": "Permit only the exact frozen Sidon 7,193-point witness workflow bound to the registered packet, producer profile, verifier capsule, positive result contract, and exact replay; all other work defers.",
+  "before_hash": "sha256:null",
+  "after_hash": "sha256:null",
+  "payload": {
+    "proposal_id": "vpr_fc11a76e1f726ba9",
+    "proposal_kind": "governance.policy_head",
+    "verdict": "accepted"
+  },
+  "caveats": [],
+  "signature": "v1:0e9ab1e30463882cc3cbad6003cd0302b27ba35294b9f5ca3c896671280a19dbbdee0b2cd4ce50892c8d69e289467d017f0275b6b3ac468e93cc6736a99c030b"
+}
