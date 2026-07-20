@@ -1,0 +1,126 @@
+{
+  "schema": "vela.proposal.v0.1",
+  "id": "vpr_491cc97cfdfe98ff",
+  "kind": "finding.add",
+  "target": {
+    "type": "finding",
+    "id": "vf_0a556d66256b2f03"
+  },
+  "actor": {
+    "id": "agent:canopus-local",
+    "type": "agent"
+  },
+  "created_at": "2026-07-20T22:05:10.316521+00:00",
+  "reason": "Manual finding added to frontier state",
+  "payload": {
+    "finding": {
+      "assertion": {
+        "direction": null,
+        "relation": null,
+        "text": "Produced the exact reconstructed 7,194-point Sidon witness for {0,1}^24.",
+        "type": "computational"
+      },
+      "conditions": {
+        "duration": null,
+        "text": "Record vrc_aa5ada0deea6ebe2 (signed; recorded against the current head). Receipt: sha256:91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c. Caveats: Verification by the separate frozen Vela verifier remains pending; Canopus must freeze and verify the workspace-backed artifact after producer exit. | Declared verifier outcome: passed. | Canopus produced this record; it is not a human acceptance decision.. Artifacts: 3 hash-verified at propose."
+      },
+      "confidence": {
+        "basis": "operator-supplied frontier prior; review required",
+        "extraction_confidence": 1.0,
+        "kind": "frontier_epistemic",
+        "method": "expert_judgment",
+        "score": 0.3
+      },
+      "created": "2026-07-20T22:05:10.317931+00:00",
+      "evidence": {
+        "evidence_spans": [
+          {
+            "artifact_kind": "vela-witness",
+            "artifact_locator": "records/artifacts/sha256/878b05e01dbc4a785e5a671f977509f0bb338dfcb58ac53bf03d47bf6465f01e",
+            "artifact_sha256": "878b05e01dbc4a785e5a671f977509f0bb338dfcb58ac53bf03d47bf6465f01e",
+            "section": "artifacts[0]",
+            "source": "records/receipts/sha256/91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c.json",
+            "text": "Produced the exact reconstructed 7,194-point Sidon witness for {0,1}^24."
+          },
+          {
+            "artifact_kind": "engine-manifest",
+            "artifact_locator": "records/artifacts/sha256/ba5da48c4f6fd744a70eb82d5e1a8291f981bf5ee4df9ec2d86d8184fde22de3",
+            "artifact_sha256": "ba5da48c4f6fd744a70eb82d5e1a8291f981bf5ee4df9ec2d86d8184fde22de3",
+            "section": "artifacts[1]",
+            "source": "records/receipts/sha256/91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c.json",
+            "text": "Produced the exact reconstructed 7,194-point Sidon witness for {0,1}^24."
+          },
+          {
+            "artifact_kind": "verifier-manifest",
+            "artifact_locator": "records/artifacts/sha256/5eca82c582a9d3b6ae63d137cf7dadd4a01e40d52bc1bfac99932d1d8752f884",
+            "artifact_sha256": "5eca82c582a9d3b6ae63d137cf7dadd4a01e40d52bc1bfac99932d1d8752f884",
+            "section": "artifacts[2]",
+            "source": "records/receipts/sha256/91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c.json",
+            "text": "Produced the exact reconstructed 7,194-point Sidon witness for {0,1}^24."
+          }
+        ],
+        "method": "manual state transition",
+        "model_system": "",
+        "replicated": false,
+        "replication_count": null,
+        "type": "computational"
+      },
+      "flags": {
+        "contested": false,
+        "declining": false,
+        "gap": false,
+        "gravity_well": false,
+        "negative_space": false,
+        "retracted": false
+      },
+      "id": "vf_0a556d66256b2f03",
+      "links": [],
+      "previous_version": null,
+      "provenance": {
+        "authors": [
+          {
+            "name": "agent:canopus-local",
+            "orcid": null
+          }
+        ],
+        "doi": null,
+        "extraction": {
+          "extracted_at": "2026-07-20T22:05:10.316521+00:00",
+          "extractor_version": "vela/0.910.0",
+          "method": "manual_curation",
+          "model": null,
+          "model_version": null
+        },
+        "review": {
+          "corrections": [],
+          "reviewed": false,
+          "reviewed_at": null,
+          "reviewer": null
+        },
+        "source_type": "model_output",
+        "title": "record:vrc_aa5ada0deea6ebe2",
+        "year": null
+      },
+      "updated": null,
+      "version": 1
+    },
+    "vela_submission": {
+      "operation_id": "vop_14cce1b7e5d1843809200de673d7111af60591d7c09b8d533377627da82e4530",
+      "receipt_path": "records/receipts/sha256/91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c.json",
+      "receipt_root": "sha256:91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c",
+      "record_id": "vrc_aa5ada0deea6ebe2",
+      "review_material_path": "records/review/sha256/91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c.json",
+      "schema": "vela.submission-links.internal.v1"
+    }
+  },
+  "source_refs": [
+    "record:vrc_aa5ada0deea6ebe2",
+    "records/receipts/sha256/91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c.json",
+    "records/review/sha256/91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c.json",
+    "sha256:91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c"
+  ],
+  "status": "pending_review",
+  "caveats": [
+    "Manual findings require evidence review before scientific use."
+  ]
+}

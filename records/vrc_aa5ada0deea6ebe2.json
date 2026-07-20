@@ -1,0 +1,63 @@
+{
+  "schema": "vela.activity-record.v0.1",
+  "id": "vrc_aa5ada0deea6ebe2",
+  "frontier_id": "vfr_496956067dc5ad79",
+  "against_head": "11a668d1cdd9caa18f6c3c78ac8c03431bd2ab9beb71f3c62c747d8a7b6571cd",
+  "assertion": "Produced the exact reconstructed 7,194-point Sidon witness for {0,1}^24.",
+  "assertion_type": "computational",
+  "artifacts": [
+    {
+      "kind": "vela-witness",
+      "locator": "records/artifacts/sha256/878b05e01dbc4a785e5a671f977509f0bb338dfcb58ac53bf03d47bf6465f01e",
+      "sha256": "878b05e01dbc4a785e5a671f977509f0bb338dfcb58ac53bf03d47bf6465f01e",
+      "size_bytes": 359754,
+      "media_type": "application/octet-stream",
+      "disclosure": "public",
+      "locator_integrity": "immutable",
+      "availability": "available",
+      "note": "copied from Receipt v1 artifact 0"
+    },
+    {
+      "kind": "engine-manifest",
+      "locator": "records/artifacts/sha256/ba5da48c4f6fd744a70eb82d5e1a8291f981bf5ee4df9ec2d86d8184fde22de3",
+      "sha256": "ba5da48c4f6fd744a70eb82d5e1a8291f981bf5ee4df9ec2d86d8184fde22de3",
+      "size_bytes": 778,
+      "media_type": "application/octet-stream",
+      "disclosure": "public",
+      "locator_integrity": "immutable",
+      "availability": "available",
+      "note": "copied from Receipt v1 artifact 1"
+    },
+    {
+      "kind": "verifier-manifest",
+      "locator": "records/artifacts/sha256/5eca82c582a9d3b6ae63d137cf7dadd4a01e40d52bc1bfac99932d1d8752f884",
+      "sha256": "5eca82c582a9d3b6ae63d137cf7dadd4a01e40d52bc1bfac99932d1d8752f884",
+      "size_bytes": 658,
+      "media_type": "application/octet-stream",
+      "disclosure": "public",
+      "locator_integrity": "immutable",
+      "availability": "available",
+      "note": "copied from Receipt v1 artifact 2"
+    }
+  ],
+  "caveats": [
+    "Verification by the separate frozen Vela verifier remains pending; Canopus must freeze and verify the workspace-backed artifact after producer exit.",
+    "Declared verifier outcome: passed.",
+    "Canopus produced this record; it is not a human acceptance decision."
+  ],
+  "receipt_digest": "sha256:91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c",
+  "receipt_path": "records/receipts/sha256/91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c.json",
+  "operation_id": "vop_14cce1b7e5d1843809200de673d7111af60591d7c09b8d533377627da82e4530",
+  "lineage": {
+    "parents": [],
+    "derived_from": [],
+    "source_refs": [],
+    "supersedes": [],
+    "producer_run_id": null,
+    "frontier": null
+  },
+  "emitted_by": "agent:canopus-local",
+  "emitted_at": "2026-07-20T22:05:10.316521+00:00",
+  "signature": "564f472085c1fe1f4d7e93319831106035d2173ac2deb9127c68e10cfcec37f324c450e448a5c01ffc4416de78d673474cb5fbf579933801815134dfe3043e0a",
+  "signer_pubkey_hex": "3cdf683cbd7cccdb5990315176cb2000b663cdf89c3fa30ce802760de0a18092"
+}

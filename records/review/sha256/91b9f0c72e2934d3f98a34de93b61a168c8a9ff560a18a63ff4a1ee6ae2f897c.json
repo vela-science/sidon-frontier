@@ -1,0 +1,51 @@
+{
+  "schema": "vela.proposal-review-material.internal.v2",
+  "proposal_id": "vpr_491cc97cfdfe98ff",
+  "receipt_root": "sha256:91b9f0c72e2934d3f98a34de93b61a168c8a9ff560a18a63ff4a1ee6ae2f897c",
+  "evaluated_at": "2026-07-20T22:05:10.316521+00:00",
+  "route": {
+    "schema": "vela.staged-review-route.internal.v2",
+    "policy_context": {
+      "claim_class": "receipt_computational",
+      "assurance_level": 0,
+      "impact_tier": 1,
+      "changed_findings": 1,
+      "downstream_dependents": 0,
+      "assertion_text_mutated": true,
+      "target_contested": false,
+      "governance_mutation": false,
+      "independence_satisfied": false,
+      "method_integrity_sound": false,
+      "credential_valid": false,
+      "has_unknown_fields": false,
+      "replayability": "exact"
+    },
+    "policy_decision": {
+      "outcome": "defer",
+      "matched_rule_ids": [],
+      "reasons": [
+        "search-witness-v1:credential_invalid",
+        "search-witness-v1:assurance_below_min(0<2)",
+        "search-witness-v1:method_integrity_unattested",
+        "search-witness-v1:execution_binding_missing"
+      ],
+      "evaluator": "vela-policy@0.2.0",
+      "policy_id": "vap_540ab5be1b4cb70f011d1b52ec155c5f"
+    },
+    "policy_state": "active",
+    "permit_readiness": "ready",
+    "reason_codes": [],
+    "engine_gate": {
+      "status": "blocked",
+      "new_blocking": [],
+      "new_warnings": [
+        "condition.comparator_or_baseline@vf_0a556d66256b2f03",
+        "proof.freshness@vfr_496956067dc5ad79"
+      ],
+      "forced": false,
+      "strict": true,
+      "release_blocking_failed": 0,
+      "warnings": 74
+    }
+  }
+}
