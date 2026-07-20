@@ -34,10 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: vela-science/vela@f9badc0ad3e2a840385cfb006750209088249c27 # v0.901.0
+      - uses: vela-science/vela@273a82db549673ae336c9fa3374393e7ea19be04 # v0.910.0
         with:
           frontier: .
-          vela-version: v0.901.0
+          vela-version: v0.910.0
       # A stranger re-runs every frozen verifier on every stored witness from a
       # clean checkout. `vela` is on PATH from the action above. This is the
       # un-forgeable floor the exact-lane admissions rest on.
