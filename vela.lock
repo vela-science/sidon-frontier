@@ -1,31 +1,37 @@
-schema: vela.frontier_lock.v0.1
-generated_at: 2026-07-20T22:03:46.948471+00:00
-vela_version: 0.910.0
+schema: vela.frontier_lock.v1
+generated_at: 2026-07-23T19:52:56Z
+vela_version: 0.915.1
 frontier_id: vfr_496956067dc5ad79
+profile_root: sha256:001be8344df27d2a16254b40380d20670a64c9d10618340129fbbb3d9645e8f1
+identity_root: sha256:7f9188e19b55727db2855533e033483b29e1c345a8a0ed03fd190ea54ec0e871
+dependency_root: sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+scientific_state_root: sha256:ff5a5810d1a173a67253ac2cf509cfb3518cb7fc0b99c840387a8a4d5fe879b6
+legacy_snapshot_root: sha256:cbdb7287da96e05567d656ae67e9b656cd5a459290851be0397438cd3d3b12e0
+event_log_root: sha256:388557398acd3828f01e09e522f423efa0194526c26938f6c7b7fc833fc8367f
+event_count: 107
+proposal_root: sha256:c0908b306b5b6bc022ce4355f630215ea203a8c8b47072e62bc325e3de57ef22
 canonicalization:
   json: vela-canonical-json-v0.1
   yaml: vela-yaml-v0.1
 reducer:
-  package: vela@0.910.0
-  digest: sha256:6cdb9a43918a0847b8cce1667899e0087f31284bd6d676b2ef67d511d2b6eb64
+  package: vela@0.915.1
+  digest: sha256:899180e33040c904949e6c2edb29a22ea50e202c472c44ea27426bb3ff9e169f
 verifiers:
-  package: vela-verify@0.910.0
-  digest: sha256:9a711001cc136f3685d0355fb065eab6a71b37b05914b7332d0450382770d699
+  package: vela-verify@0.915.1
+  digest: sha256:59e4ebef086b7a9029537e4e3641c65b2420ef2bb8ffcfc6d19b75d7a18fcabc
   kinds:
   - sidon
-snapshot_hash: sha256:0441baf3d3c0f7f58e51d8d0b54d2e20ee94c57cfe3fd52ec0ea6dde2ee0c92d
-event_log_hash: sha256:11a668d1cdd9caa18f6c3c78ac8c03431bd2ab9beb71f3c62c747d8a7b6571cd
-proposal_state_hash: sha256:c0908b306b5b6bc022ce4355f630215ea203a8c8b47072e62bc325e3de57ef22
 sources_hash: sha256:cd786a26b7e4ad047374953d7258cb54c4741709a27ff37b63392e3b07633762
 artifacts_hash: sha256:f965ef1ac47657eed6214ec28dedd971a751d17245e3b00f52f7d77f97de0518
 review_hash: sha256:6d6b1b84bfe7cb32ecb261b27ea3f99194e4f460bdb39ce83c92b86fd1a8759d
 proof_freshness: fresh
 proof:
   latest: proof/latest.json
-  digest: sha256:29675c2b9c22181ba49b9360a6a2354cf65e924d14301b22fce167dd13f6d086
+  digest: sha256:41b9c4dc596f5224d3c3ea83d155f45ea4e834cd09bc54ac709752858512fb2a
   freshness: fresh
   events_manifest: proof/events.manifest.jsonl
   replay_trace: proof/replay.trace.jsonl
 paths:
   frontier: frontier.json
   events: .vela/events/
+dependencies: []
