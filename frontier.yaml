@@ -1,16 +1,16 @@
-schema: vela.frontier-profile.v1
+schema: vela.frontier-profile.v2
 frontier_id: vfr_496956067dc5ad79
-name: "Additive combinatorics: Sidon sets"
+name: 'Additive combinatorics: Sidon sets'
 summary: Explicit Sidon-set constructions, verified lower bounds, and bounded searches in binary cubes.
 scope:
   question: Which explicit Sidon subsets improve reproducible lower bounds in the binary cube?
   includes:
-    - Explicit construction witnesses, exact lower bounds, verifier evidence, and bounded search artifacts.
+  - Explicit construction witnesses, exact lower bounds, verifier evidence, and bounded search artifacts.
   excludes:
-    - Maximality or universal nonexistence claims from bounded failures.
-    - Verifier success as scientific acceptance.
+  - Maximality or universal nonexistence claims from bounded failures.
+  - Verifier success as scientific acceptance.
 maintainers:
-  - williamjblair
+- williamjblair
 license:
   content: CC-BY-4.0
   code: Apache-2.0
