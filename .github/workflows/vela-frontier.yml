@@ -1,31 +1,9 @@
-name: Verify the signed frontier
+name: Verify current Vela repository
 
-# The git-native gate, via the shared action: on every change to the signed
-# frontier, the pinned Vela release re-derives it from a clean checkout and
-# proves the working tree IS the signed state (replay + signatures + hash
-# parity), then re-runs every frozen verifier on every stored witness. It NEVER
-# signs and NEVER merges. GitHub branch protection owns the merge gate.
 on:
   push:
     branches: [main]
-    paths:
-      - ".vela/**"
-      - "frontier.json"
-      - "frontier.yaml"
-      - "vela.lock"
-      - "proof/**"
-      - "verification/**"
-      - "witnesses/**"
-      - ".github/workflows/vela-frontier.yml"
-  pull_request:
-    paths:
-      - ".vela/**"
-      - "frontier.json"
-      - "frontier.yaml"
-      - "vela.lock"
-      - "proof/**"
-      - "verification/**"
-      - "witnesses/**"
+  pull_request: {}
   workflow_dispatch: {}
 
 permissions:
@@ -33,20 +11,16 @@ permissions:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: vela-science/vela@273a82db549673ae336c9fa3374393e7ea19be04 # v0.910.0
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+        with:
+          fetch-depth: 0
+      - uses: vela-science/vela@1b051d62bdbd8358c76071e5cfdfb19baf33e2d8 # v0.940.0
         with:
           frontier: .
-          vela-version: v0.910.0
-      # A stranger re-runs every frozen verifier on every stored witness from a
-      # clean checkout. `vela` is on PATH from the action above. This is the
-      # un-forgeable floor the exact-lane admissions rest on.
-      - name: Reproduce every witness from scratch
-        run: vela reproduce .
+          vela-version: v0.940.0
+          authority-record-root: ${{ vars.VELA_AUTHORITY_RECORD_ROOT }}
       - name: Reproduce the independent GPT-5.6 Sidon audit
         run: >-
           node verification/verify-sidon-a24-7194.mjs

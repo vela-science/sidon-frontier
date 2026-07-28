@@ -4,52 +4,37 @@ This repository records explicit lower bounds for Sidon subsets of the binary
 cube. A set is Sidon when all componentwise integer sums `a + b`, with `a <= b`,
 are distinct. The sequence is [OEIS A309370](https://oeis.org/A309370).
 
-Accepted state currently records `a(24) >= 7179`. The repository also contains
-a mechanically verified 7,193-point witness and a GPT-5.6-produced 7,194-point
-witness, both pending review. The latter improves the earlier pending witness
-by one point; it does not establish maximality, and Git publication is not
-scientific acceptance.
+Accepted state records the bounds in `records/claims/`. Historical witnesses
+and searches remain retained evidence; their presence in Git is not scientific
+acceptance.
 
 ## Work on the frontier
 
-Use the released Vela version pinned by `vela.lock`:
+The current epoch has no configured Target Index, so `vela next` correctly
+returns no offers. Inspect and verify the migrated repository with Vela
+`0.940.0`:
 
 ```bash
 vela status . --json
 vela next . --limit 1 --json
-vela work sidon:a24-improve --as agent:<name> --json
-
-# Produce the exact artifact required by the returned packet, then:
-vela-verify --claim \
-  "There exists a Sidon subset of {0,1}^24 with at least 7,194 elements." \
-  path/to/witness.json
-vela land --frontier . --work sidon:a24-improve \
-  --claim "There exists a Sidon subset of {0,1}^24 with at least 7,194 elements." \
-  --type computational --replayability exact \
-  --artifact path/to/witness.json:vela-witness \
-  --caveat "This is a lower bound, not a proof of maximality." \
-  --as agent:<name> --json
+vela check . --strict --json
 ```
 
-`vela land` creates a Receipt and lets Vela evaluate the active signed policy.
-Without a matching Permit policy, the result remains `Deferred` and
-`pending_review`. Git publication transports the record; it is not scientific
-acceptance. Only a registered human or an exact previously signed policy can
-change accepted state.
-
-The ranked target index and packet are non-authoritative, deletable projections.
-The event log under `.vela/` remains the source of accepted state.
+`.vela/epoch.json` binds predecessor tag
+`pre-current-epoch/1c0316f51f09`. `.vela/repository.json` indexes current
+claims and artifacts, `.vela/authority/` contains signed repository authority,
+and `records/` contains content-addressed scientific objects.
 
 ## Verify the record
 
 ```bash
-vela check .
+vela check . --strict
 vela reproduce artifacts/sidon-a24-improvement.witness.json
 node verification/verify-sidon-a24-7194.mjs \
   artifacts/sidon-a24-gpt56-7194.witness.json
 ```
 
-Strict verification passes. The [independent Build Week verification](verification/README.md)
+Strict repository verification passes. The [independent Build Week verification](verification/README.md)
 uses a separate JavaScript/base-3 implementation to check the 7,194-point
 witness and reject a deterministic collision injection. It is auxiliary
 evidence, not a registered Vela verifier attachment or an acceptance decision.

@@ -10,21 +10,18 @@ Generated from VELA.md. Edit VELA.md and run `vela agents sync`; do not edit her
 
 Agents may:
 
-- inspect `vela status .`, `vela next .`, and `vela check .`;
-- claim one ranked target with `vela work <target> --as agent:<name> --json`;
-- run the frozen verifier named by the packet;
-- land one Receipt through the active work session;
-- prepare one exact protected review or policy plan for human inspection; and
-- rebuild derived views only through Vela porcelain.
+- inspect `vela status .`, `vela next .`, `vela show`, `vela why`, and
+  `vela check . --strict`
+- start one offered Target when a current Target Index exists
+- run the verifier named by the exact packet
+- register one signed, bounded Submission from the active Attempt
 
 Agents may not:
 
-- approve a protected card or use a human signing key;
-- accept, reject, apply, or finalize a truth-bearing proposal;
-- treat verifier success, Git publication, or a model answer as acceptance;
-- hand-edit accepted events, findings, `frontier.json`, proof views, or
-  `vela.lock`; or
-- hide the structural debt recorded in `DEBT.md`.
+- invoke repository-authority decisions or use its credentials
+- treat verifier success, Git publication, or a model answer as acceptance
+- hand-edit `.vela/authority/`, `.vela/repository.json`, or retained records
+- hide the structural debt recorded in `DEBT.md`
 
 Use `vela status --json` before proposing changes. Every proposed transition is a
 draft until a key-holding human accepts it. The full charter is VELA.md.
