@@ -4,9 +4,9 @@
   "source_frontier": {
     "commit": "f557bb3f63c409c725df4944391c52ae7995fcca",
     "tree": "e5610aa6c5e1ad767e840e51a4e695dbfd2d2fdd",
-    "target": "sidon:a24-improve",
-    "packet_path": "targets/sidon-a24-improve.json",
-    "packet_sha256": "sha256:bfa12fbedb3cd6ce0faf854ed1e506bb52b739ba2b1f03207567d33ef1f43b15"
+    "historical_target_id": "sidon:a24-improve",
+    "historical_packet_sha256": "sha256:bfa12fbedb3cd6ce0faf854ed1e506bb52b739ba2b1f03207567d33ef1f43b15",
+    "disposition": "retired_no_current_target_index"
   },
   "input": {
     "path": "discoveries/sweep-2026-06/witnesses/sidon-a24-improved.witness.json",

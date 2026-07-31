@@ -11,8 +11,10 @@ acceptance.
 ## Work on the frontier
 
 The current epoch has no configured Target Index, so `vela next` correctly
-returns no offers. Inspect and verify the migrated repository with Vela
-`0.940.0`:
+returns no offers. The obsolete unindexed a(24) packet and its broken refresh
+script were removed; the exact historical packet root remains bound by the
+retained exchange benchmark. Inspect and verify the repository with the current
+Vela CLI:
 
 ```bash
 vela status . --json
@@ -34,7 +36,7 @@ node verification/verify-sidon-a24-7194.mjs \
   artifacts/sidon-a24-gpt56-7194.witness.json
 ```
 
-Strict repository verification passes. The [independent Build Week verification](verification/README.md)
+Strict repository verification passes. The [auxiliary independent verification](verification/README.md)
 uses a separate JavaScript/base-3 implementation to check the 7,194-point
 witness and reject a deterministic collision injection. It is auxiliary
 evidence, not a registered Vela verifier attachment or an acceptance decision.
