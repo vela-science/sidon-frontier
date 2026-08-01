@@ -22,10 +22,10 @@ vela next . --limit 1 --json
 vela check . --json
 ```
 
-`.vela/epoch.json` binds predecessor tag
-`pre-current-epoch/1c0316f51f09`. `.vela/repository.json` indexes current
-claims and artifacts, `.vela/authority/` contains signed repository authority,
-and `records/` contains content-addressed scientific objects.
+`.vela/origin.json` binds compacted predecessor tag
+`pre-compaction/d0915ecd4dd8`. `.vela/repository.json` indexes current Claims
+and artifacts, `.vela/authority/` contains repository authority, and `records/`
+contains content-addressed scientific objects.
 
 ## Verify the record
 
@@ -44,6 +44,8 @@ Two historical artifact links target exact pending findings and remain
 explicitly classified as provisional, unauthenticated evidence. They do not
 enter accepted state; see [DEBT.md](DEBT.md).
 
-Current accepted bounds are projected in [bounds.json](bounds.json). Witnesses
-and prior search artifacts are retained under `witnesses/` and `discoveries/`.
-Scope is defined in [SCOPE.md](SCOPE.md) and [STATEMENT.md](STATEMENT.md).
+Current accepted bounds are derived from the accepted Claim Records; this
+repository intentionally carries no second hand-maintained status snapshot.
+Witnesses and prior search artifacts are retained under `witnesses/` and
+`discoveries/`. Scope is defined in [SCOPE.md](SCOPE.md) and
+[STATEMENT.md](STATEMENT.md).

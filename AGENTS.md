@@ -10,9 +10,9 @@ Agents may:
 
 - inspect `vela status .`, `vela next .`, `vela show`, `vela why`, and
   `vela check .`
-- start one offered Target when a current Target Index exists
+- inspect one offered Target with the write-free `vela start` briefing
 - run the verifier named by the exact packet
-- retain one signed, bounded Submission from the active Attempt
+- retain one signed, bounded Submission binding the exact packet and verifier
 
 Agents may not:
 
@@ -26,11 +26,15 @@ Agents may not:
 ```bash
 vela status . --json
 vela next . --limit 1 --json
-vela start <target> --as agent:<name> --json
-vela submit --frontier . --attempt <vat_id> --claim "<bounded result>" \
+vela start <target> --frontier . --json
+vela submit --frontier . --claim "<bounded result>" \
   --type computational --replayability exact \
   --artifact <path>:<kind> --caveat "<scope limit>" \
+  --packet-root <packet_sha256> --profile-root <profile_sha256> \
+  --verifier-capsule-root <capsule_sha256> \
+  --result-contract-root <contract_sha256> \
   --as agent:<name> --json
+vela verification import . <verification.json> --as verifier:<name> --json
 vela review list . --json
 vela show . <object_id> --json
 vela why . <claim_id> --json
