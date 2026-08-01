@@ -1,5 +1,5 @@
 {
-  "schema": "sidon.independent-verification.v1",
+  "schema": "sidon.implementation-diverse-verification.v1",
   "claim": "The reconstructed witness contains 7,194 distinct points in {0,1}^24 and has unique unordered componentwise pair sums.",
   "subject": {
     "path": "artifacts/sidon-a24-gpt56-7194.witness.json",
@@ -10,9 +10,21 @@
   "verifier": {
     "implementation": "node-base3-float64-sort-v1",
     "source_path": "verification/verify-sidon-a24-7194.mjs",
-    "source_sha256": "sha256:ddbef08b366138005618c937d732f95361488db22104d86819f5d212b89bf254",
+    "source_sha256": "sha256:a21aa3d6532612fa1ec2bf4e8ddffbb8e29bf779da857d3dcc515b2678eee0be",
     "method": "Encode each binary point as an exact base-3 integer, sort every unordered pair-code sum, and reject adjacent duplicates.",
-    "independence_note": "This JavaScript implementation is separate from the frozen Rust vela-verify capsule used by Canopus."
+    "independence": {
+      "implementation": "distinct",
+      "actor": "not_established",
+      "organization": "not_established",
+      "environment": "shared",
+      "external_participant": false,
+      "shared_dependencies": [
+        "operator",
+        "machine",
+        "campaign",
+        "witness"
+      ]
+    }
   },
   "result": {
     "outcome": "pass",
@@ -45,7 +57,7 @@
   "authority": {
     "kind": "non_authoritative_auxiliary_evidence",
     "vela_state_changed": false,
-    "review_attachment_registered": false,
-    "note": "This report strengthens reproducibility but is not a Vela verifier attachment or a human acceptance decision."
+    "verification_record_retained": false,
+    "note": "This report strengthens implementation diversity but is not a Vela Verification Record or a human acceptance Decision."
   }
 }

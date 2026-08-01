@@ -150,7 +150,7 @@ if (adversarial.ok || adversarial.reason !== "pairwise-sum-collision") {
 const sourcePath = fileURLToPath(import.meta.url);
 const sourceRoot = sha256(await readFile(sourcePath));
 const report = {
-  schema: "sidon.independent-verification.v1",
+  schema: "sidon.implementation-diverse-verification.v1",
   claim: "The reconstructed witness contains 7,194 distinct points in {0,1}^24 and has unique unordered componentwise pair sums.",
   subject: {
     path: path.relative(process.cwd(), witnessPath),
@@ -163,7 +163,14 @@ const report = {
     source_path: path.relative(process.cwd(), sourcePath),
     source_sha256: `sha256:${sourceRoot}`,
     method: "Encode each binary point as an exact base-3 integer, sort every unordered pair-code sum, and reject adjacent duplicates.",
-    independence_note: "This JavaScript implementation is separate from the frozen Rust vela-verify capsule used by Canopus.",
+    independence: {
+      implementation: "distinct",
+      actor: "not_established",
+      organization: "not_established",
+      environment: "shared",
+      external_participant: false,
+      shared_dependencies: ["operator", "machine", "campaign", "witness"],
+    },
   },
   result: {
     outcome: "pass",
@@ -183,8 +190,8 @@ const report = {
   authority: {
     kind: "non_authoritative_auxiliary_evidence",
     vela_state_changed: false,
-    review_attachment_registered: false,
-    note: "This report strengthens reproducibility but is not a Vela verifier attachment or a human acceptance decision.",
+    verification_record_retained: false,
+    note: "This report strengthens implementation diversity but is not a Vela Verification Record or a human acceptance Decision.",
   },
 };
 

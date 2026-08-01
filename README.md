@@ -36,12 +36,23 @@ node verification/verify-sidon-a24-7194.mjs \
   artifacts/sidon-a24-gpt56-7194.witness.json
 ```
 
-Strict repository verification passes. The [auxiliary independent verification](verification/README.md)
-uses a separate JavaScript/base-3 implementation to check the 7,194-point
-witness and reject a deterministic collision injection. It is auxiliary
-evidence, not a registered Vela verifier attachment or an acceptance decision.
+Strict repository verification passes. The [auxiliary implementation-diverse
+verification](verification/README.md) uses a separate JavaScript/base-3
+implementation to check the 7,194-point witness and reject a deterministic
+collision injection. It shares the same operator, machine, campaign, and
+witness, so it is not organizationally or externally independent. It is
+auxiliary evidence, not a retained Vela Verification Record or an acceptance
+Decision.
 Current accepted bounds are derived from the accepted Claim Records; this
 repository intentionally carries no second hand-maintained status snapshot.
 Witnesses and prior search artifacts are retained under `witnesses/` and
 `discoveries/`. Scope is defined in [SCOPE.md](SCOPE.md) and
 [STATEMENT.md](STATEMENT.md).
+
+## Archived edition
+
+The first archived edition, `v1.0-oeis-adopted`, is preserved at
+[doi:10.5281/zenodo.20709455](https://doi.org/10.5281/zenodo.20709455). It
+records the A309370 witnesses for `a(7)..a(24)` and the OEIS-adopted lower
+bounds for `n=8..22` as of June 10, 2026. This citation is historical; current
+Standing is derived only from the replayed Claim and Decision records.
