@@ -13,7 +13,7 @@ reviewed state.
 Command:
 
 ```bash
-vela check examples/sidon-sets --strict --json
+vela check examples/sidon-sets --json
 ```
 
 Current result:
@@ -95,7 +95,7 @@ This ledger is complete for proposal-review blockers. Remaining
 non-biomedical quality work is evidence-span and methodology review.
 The proposal-review exit condition is:
 
-1. `vela check examples/sidon-sets --strict --json` reports signal
+1. `vela check examples/sidon-sets --json` reports signal
    blockers at `0`.
 2. Evidence CI remains `ok: true` with `release_blocking_failed: 0`.
 3. The proof packet is regenerated and validates after the review

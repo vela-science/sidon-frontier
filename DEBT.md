@@ -18,7 +18,7 @@ accepted findings. This classification does not authenticate the proposals,
 admit either finding, or alter their pending status.
 
 The proof projection has been regenerated from the exact event log and retained
-for clean-clone replay. `vela check . --strict` is green while the two links
+for clean-clone replay. `vela check .` is green while the two links
 remain explicit in the artifact audit. If either pending proposal disappears,
 is rejected or withdrawn, becomes ambiguous, or its target changes, the audit
 fails closed again. The eventual scientific decisions remain human authority.

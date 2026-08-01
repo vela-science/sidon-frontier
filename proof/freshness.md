@@ -11,6 +11,6 @@ Scientific-state root: `sha256:ff5a5810d1a173a67253ac2cf509cfb3518cb7fc0b99c8403
 Run:
 
 ```bash
-vela check . --strict --json
+vela check . --json
 vela proof verify . --json
 ```

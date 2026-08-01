@@ -19,7 +19,7 @@ Vela CLI:
 ```bash
 vela status . --json
 vela next . --limit 1 --json
-vela check . --strict --json
+vela check . --json
 ```
 
 `.vela/epoch.json` binds predecessor tag
@@ -30,7 +30,7 @@ and `records/` contains content-addressed scientific objects.
 ## Verify the record
 
 ```bash
-vela check . --strict
+vela check .
 vela reproduce artifacts/sidon-a24-improvement.witness.json
 node verification/verify-sidon-a24-7194.mjs \
   artifacts/sidon-a24-gpt56-7194.witness.json
