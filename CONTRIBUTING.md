@@ -20,7 +20,6 @@ Negative work must name its finite search space, algorithm, counts, and replay
 command. It must not be described as universal nonexistence unless the search
 is exhaustive over the full mathematical space.
 
-Do not hand-edit `.vela/authority/`, `.vela/repository.json`, `records/`, or
-derived proof views. Do not use repository-authority credentials. See
-[DEBT.md](DEBT.md) for the explicit provisional classification of two
-historical evidence links.
+Do not hand-edit `.vela/authority/`, `.vela/repository.json`, or `records/`.
+Do not use repository-authority credentials. Pre-compaction projections remain
+reachable through the predecessor tag; they are not active review surfaces.

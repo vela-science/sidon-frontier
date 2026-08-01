@@ -19,7 +19,7 @@ Agents may not:
 - invoke repository-authority decisions or use its credentials
 - treat verifier success, Git publication, or a model answer as acceptance
 - hand-edit `.vela/authority/`, `.vela/repository.json`, or retained records
-- hide the structural debt recorded in `DEBT.md`
+- invent work or revive predecessor-era policy and proof projections
 
 ## Fast commands
 

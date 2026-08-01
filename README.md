@@ -40,10 +40,6 @@ Strict repository verification passes. The [auxiliary independent verification](
 uses a separate JavaScript/base-3 implementation to check the 7,194-point
 witness and reject a deterministic collision injection. It is auxiliary
 evidence, not a registered Vela verifier attachment or an acceptance decision.
-Two historical artifact links target exact pending findings and remain
-explicitly classified as provisional, unauthenticated evidence. They do not
-enter accepted state; see [DEBT.md](DEBT.md).
-
 Current accepted bounds are derived from the accepted Claim Records; this
 repository intentionally carries no second hand-maintained status snapshot.
 Witnesses and prior search artifacts are retained under `witnesses/` and
