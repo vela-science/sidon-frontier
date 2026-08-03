@@ -25,4 +25,4 @@ jobs:
         run: >-
           node verification/verify-sidon-a24-7194.mjs
           artifacts/sidon-a24-gpt56-7194.witness.json |
-          diff - verification/sidon-a24-7194.independent-verification.json
+          diff - verification/sidon-a24-7194.implementation-diverse-verification.json
