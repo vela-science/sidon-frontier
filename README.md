@@ -46,8 +46,8 @@ Decision.
 Current accepted bounds are derived from the accepted Claim Records; this
 repository intentionally carries no second hand-maintained status snapshot.
 Witnesses and prior search artifacts are retained under `witnesses/` and
-`discoveries/`. Scope is defined in [SCOPE.md](SCOPE.md) and
-[STATEMENT.md](STATEMENT.md).
+`discoveries/`. Scope is defined in `frontier.toml`, whose bytes are covered by
+`profile_root`, and the question is stated in [STATEMENT.md](STATEMENT.md).
 
 ## Archived edition
 
