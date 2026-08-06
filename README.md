@@ -19,7 +19,7 @@ Vela CLI:
 ```bash
 vela status . --json
 vela next . --limit 1 --json
-vela check . --json
+vela replay . --json
 ```
 
 `.vela/origin.json` binds compacted predecessor tag
@@ -30,13 +30,13 @@ contains content-addressed scientific objects.
 ## Verify the record
 
 ```bash
-vela check .
+vela replay .
 vela reproduce artifacts/sidon-a24-improvement.witness.json
 node verification/verify-sidon-a24-7194.mjs \
   artifacts/sidon-a24-gpt56-7194.witness.json
 ```
 
-Strict repository verification passes. The [auxiliary implementation-diverse
+Strict repository replay passes. The [auxiliary implementation-diverse
 verification](verification/README.md) uses a separate JavaScript/base-3
 implementation to check the 7,194-point witness and reject a deterministic
 collision injection. It shares the same operator, machine, campaign, and

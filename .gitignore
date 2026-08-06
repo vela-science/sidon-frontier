@@ -1,12 +1,27 @@
-# Authority: .vela/events/ (signed log). Clone-visible proof projections and
-# public records let a fresh checkout reproduce the tracked lock exactly.
+# Authority: .vela/authority/ (events, records, keysets, policies).
+# Manifest: .vela/repository.json. Origin: .vela/origin.json.
+# Clone-visible records let a fresh checkout replay the repository exactly.
 
 # Producer-local scratch (not replayable truth).
-packets/                 # review worklist, rebuilt on demand
-activity/                # vac_ candidate stream from harvest runs
-/.vela/tasks/            # per-run lease + work-session state
-/.vela/work/             # current private work-session state
+#
+# One pattern per line, with nothing after it. A `#` only opens a comment at the
+# start of a line, so the same-line annotations these entries used to carry were
+# read as part of the pattern and matched nothing: packets/, activity/,
+# .vela/tasks/ and .vela/work/ were all silently unignored.
+packets/
+activity/
+/.vela/tasks/
+/.vela/work/
 /.vela/workspaces/
+/.vela/source-inbox/
+/.vela/artifact-blobs/
+/.vela/tmp/
+
+# Signing material and agent identity. The runtime writes these under .vela/
+# alongside the authority chain, so nothing but an explicit rule keeps a
+# routine `git add .vela` from staging a private key.
+/.vela/agents/
+/.vela/keys/
 
 # Tooling scratch
 __pycache__/

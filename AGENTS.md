@@ -9,7 +9,7 @@ vendor-specific instruction copies are intentionally not used.
 Agents may:
 
 - inspect `vela status .`, `vela next .`, `vela show`, `vela why`, and
-  `vela check .`
+  `vela replay .`
 - inspect one offered Target with the write-free `vela start` briefing
 - run the verifier named by the exact packet
 - retain one signed, bounded Submission binding the exact packet and verifier
@@ -38,7 +38,7 @@ vela verification import . <verification.json> --as verifier:<name> --json
 vela review list . --json
 vela show . <object_id> --json
 vela why . <claim_id> --json
-vela check . --json
+vela replay . --json
 ```
 
 No current Target Index is configured. If `vela next` returns no offers,
