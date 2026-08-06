@@ -25,8 +25,20 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         with:
           frontier: .
+      # This Frontier has no test suite and needs none: the verifier re-derives
+      # all 25,880,415 unordered pair sums, applies its own bound adversarial
+      # mutation and requires that to be rejected, and the retained report it is
+      # diffed against carries the verifier's own source digest. Editing either
+      # side breaks the diff.
+      #
+      # `set -o pipefail` because the exit status of `a | b` is b's. Without it
+      # this step passed on whatever `diff` concluded and the verifier's own
+      # status was discarded; it happened to still fail, because a verifier that
+      # throws writes nothing and empty does not match the retained report. That
+      # is an argument, not a guarantee, and one line replaces it.
       - name: Reproduce the independent GPT-5.6 Sidon audit
-        run: >-
-          node verification/verify-sidon-a24-7194.mjs
-          artifacts/sidon-a24-gpt56-7194.witness.json |
-          diff - verification/sidon-a24-7194.implementation-diverse-verification.json
+        run: |
+          set -euo pipefail
+          node verification/verify-sidon-a24-7194.mjs \
+            artifacts/sidon-a24-gpt56-7194.witness.json \
+            | diff - verification/sidon-a24-7194.implementation-diverse-verification.json
