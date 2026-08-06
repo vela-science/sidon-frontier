@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-08-06T04:41:52+00:00",
+  "sources": {
+    "oeis_a309370": {
+      "homepage": "https://oeis.org/A309370",
+      "kind": "sequence_database",
+      "sha256": "sha256:5b6231e03be447eb7c4162e3c7b2646da898e016c915ac0401ea182e6261044c",
+      "url": "https://oeis.org/A309370?fmt=json"
+    }
+  }
+}

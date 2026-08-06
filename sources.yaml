@@ -11,9 +11,13 @@
 # under. It lives here rather than in a mapping table downstream, so adding a
 # source is one edit in one repository.
 #
-# No `sources.lock.json` exists here yet. When an acquisition run generates one
-# it records the exact content hash of each entry; it is never hand-written,
-# because a hash nobody computed is worse than no hash at all.
+# `sources.lock.json` records the exact content hash of each entry below. Every
+# hash in it is computed by the generator from bytes it fetched or read; none is
+# ever hand-written, because a hash nobody computed is worse than no hash at
+# all. Regenerate it with:
+#     python3 scripts/write_sources_lock.py
+# The generator is byte-identical across the Frontiers that carry it, so one
+# reader consumes every Frontier's lock.
 
 sources:
   oeis_a309370:
@@ -21,12 +25,16 @@ sources:
     kind: sequence_database
     url: https://oeis.org/A309370?fmt=json
     homepage: https://oeis.org/A309370
-    # UNPINNED, and currently unrecorded. OEIS serves the current revision of a
-    # sequence and offers no immutable locator, so the retained content root is
-    # the only pin available — and the lock that would hold it has not been
-    # generated, so the revision behind the accepted Claims is written down
-    # nowhere. Until an acquisition run produces that root, a refresh that
-    # changes the source cannot be told from one that does not.
+    # UNPINNED. OEIS serves the current revision of a sequence and offers no
+    # immutable locator, so the content root in the lock is the only pin
+    # available: this entry locks a sha256 and no commit, because there is no
+    # commit to lock. A refresh that changes the source can now be told from one
+    # that does not, which is what the root buys.
+    #
+    # What it does not buy: the first root was computed on 2026-08-06, long
+    # after the Claims here were accepted, and no snapshot of the earlier
+    # revision was retained. It pins this Frontier's source from now on. It is
+    # not evidence about which revision backed the accepted Claims.
     publisher: The OEIS Foundation Inc.
     note: >-
       A published b-file entry is an attributed source fact. It establishes no
